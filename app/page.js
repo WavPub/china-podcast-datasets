@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import {  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Mic, Music, Clock, FileText, CheckCircle, Star, Headphones, Radio,BarChart as BC,AudioLines,Drama,Device  } from 'lucide-react';
+import { Mic, Music, Clock, FileText, CheckCircle, Star, Headphones, Radio,BarChart as BC,AudioLines,Drama  } from 'lucide-react';
 import { Database } from 'lucide-react';
 import Image from 'next/image'
 
@@ -282,9 +282,9 @@ export default function Home() {
 
             <div className="relative w-full overflow-hidden">
               <div
-                  className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
+                  className="absolute left-0 top-0 bottom-0 w-16 bg-linear-to-r from-white to-transparent z-10"></div>
               <div
-                  className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
+                  className="absolute right-0 top-0 bottom-0 w-16 bg-linear-to-l from-white to-transparent z-10"></div>
               <div
                   ref={scrollRef}
                   className="flex overflow-x-hidden"
@@ -294,7 +294,7 @@ export default function Home() {
                 {[...cards, ...cards, ...cards].map((card, index) => (
                     <div
                         key={index}
-                        className="flex-shrink-0 w-64 h-72 bg-white shadow-lg rounded-lg m-4 p-4 transition-transform hover:scale-105"
+                        className="shrink-0 w-64 h-72 bg-white shadow-lg rounded-lg m-4 p-4 transition-transform hover:scale-105"
                     >
                       <h3 className="text-xl font-bold mb-2">{card.title}</h3>
                       <Image src={card.img} alt={card.title} width={400}
